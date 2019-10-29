@@ -12,7 +12,7 @@ using std::to_string;
 
 string pad(const string& s) { return s.size() < 2 ? "0" + s : s; }
 
-string Format::ElapsedTime(long seconds [[maybe_unused]]) {
+string Format::ElapsedTime(long seconds) {
   int SS = (int)seconds % 60;
   int MM = ((int)seconds / 60) % 60;
   int HH = (int)seconds / 3600;

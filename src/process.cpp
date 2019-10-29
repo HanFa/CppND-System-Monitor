@@ -52,7 +52,7 @@ long int Process::UpTime() { return uptime_; }
 
 // TODO: Overload the "less than" comparison operator for Process objects
 // REMOVE: [[maybe_unused]] once you define the function
-bool Process::operator<(Process& a [[maybe_unused]]) {
+bool Process::operator<(Process& a) {
   return CpuUtilization() > a.CpuUtilization();
 }
 std::pair<float, float> Process::get_last_jiffies() {
